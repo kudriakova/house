@@ -1,0 +1,38 @@
+.header {
+   background: $bg-secondary;
+
+   .row {
+      >*>* {
+         padding-top: 15px;
+         padding-bottom: 15px;
+      }
+
+      .logo {
+         border-bottom: 1px solid #C3D1C6;
+      }
+   }
+
+   .navbar-nav {
+      font-size: 1.125rem;
+   }
+
+   .navbar-toggler {
+      border: none;
+      max-height: 35px;
+
+      &:focus {
+         box-shadow: none;
+      }
+   }
+
+   .nav-link:hover {
+      text-decoration: underline;
+   }
+
+   .cart {
+      margin-left: 60px;
+      position: absolute;
+      right: 12px;
+      top: 5px;
+   }
+}
