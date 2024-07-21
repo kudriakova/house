@@ -131,7 +131,19 @@ h3 {
   color: #f4f6f5;
 }
 .catalog .catalog__list {
+  flex-direction: column;
   row-gap: 30px;
+}
+.catalog .countries {
+  display: none;
+  row-gap: 30px;
+}
+.catalog .countries > * {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+.catalog .show {
+  display: flex;
 }
 .catalog .product {
   padding: 20px 20px 30px;

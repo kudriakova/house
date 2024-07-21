@@ -38,7 +38,22 @@
     }
 
     .catalog__list {
+        flex-direction: column;
         row-gap: 30px;
+    }
+
+    .countries {
+        display: none;
+        row-gap: 30px;
+
+        >* {
+            padding-left: 0.75rem;
+            padding-right: 0.75rem;
+        }
+    }
+
+    .show {
+        display: flex;
     }
 
     .product {
