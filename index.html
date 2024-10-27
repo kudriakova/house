@@ -1,498 +1,833 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+            integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="./assets/style/css/style.css" />
+        <title>Document</title>
+    </head>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
-        integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./assets/style/css/style.css" />
-    <title>Document</title>
-</head>
-
-<body class="raleway-medium">
-    <header class="header">
-        <div class="container-fluid container-lg">
-            <div class="row align-items-md-center">
-                <div class="col-12 col-md-auto text-center">
-                    <a href="#" class="d-inline-block w-100 logo">
-                        <img src="./assets/img/logo.svg" alt="logo" />
-                    </a>
-                </div>
-                <div
-                    class="col-12 col-md d-flex justify-content-between justify-content-md-end align-items-center position-relative">
-                    <nav class="navbar navbar-expand-lg">
-                        <div class="container-fluid px-0">
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
-                                aria-expanded="false" aria-label="Переключатель навигации">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                                <div class="navbar-nav ms-auto me-0">
-                                    <a class="nav-link" href="#catalog">Репродукции</a>
-                                    <a class="nav-link" href="#collection">Новинки</a>
-                                    <a class="nav-link" href="#team">О нас</a>
-                                </div>
-                            </div>
-                        </div>
-                    </nav>
-                    <div class="cart">
-                        <img src="./assets/img/cart.svg" alt="cart" />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-    <main>
-        <section class="intro">
+    <body class="raleway-medium">
+        <header class="header">
             <div class="container-fluid container-lg">
-                <div class="row align-items-center">
-                    <div class="col-auto col-md-6 d-none d-sm-block">
-                        <img src="./assets/img/bird.png" alt="bird" />
+                <div class="row align-items-md-center">
+                    <div class="col-12 col-md-auto text-center">
+                        <a href="#" class="d-inline-block w-100 logo">
+                            <img src="./assets/img/logo.svg" alt="logo" />
+                        </a>
                     </div>
-                    <div class="col col-md-6">
-                        <h1>Реплики картин от <span>Ink. House</span></h1>
-                        <p class="intro__description">
-                            Высокое качество отрисовки на плотной бумаге или
-                            льняном холсте. Редкие произведения, доступные
-                            цены.
-                        </p>
-                        <a href="#" class="d-inline-block baton">Продукция</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="catalog" id="catalog">
-            <div class="container-fluid container-lg">
-                <div class="row align-items-md-center title-row">
-                    <div class="col-12 col-md-auto">
-                        <h2>Репродукции</h2>
-                    </div>
-                    <div class="col-12 col-md d-flex justify-content-md-end">
-                        <div class="catalog__filters filters d-none d-sm-flex">
-                            <button type="button" class="filters__item active raleway-medium france">
-                                Франция
-                            </button>
-                            <button type="button" class="filters__item raleway-medium germany">
-                                Германия
-                            </button>
-                            <button type="button" class="filters__item raleway-medium england">
-                                Англия
-                            </button>
-                        </div>
-                        <div class="catalog__filters flags d-flex d-sm-none justify-content-center">
-                            <button type="button" class="flags__item">
-                                <img src="./assets/img/fr.svg" alt="France" />
-                            </button>
-                            <button type="button" class="flags__item">
-                                <img src="./assets/img/ger.svg" alt="Germany" />
-                            </button>
-                            <button type="button" class="flags__item">
-                                <img src="./assets/img/eng.svg" alt="England" />
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="row catalog__list">
-                    <div class="france countries show flex-wrap">
-                        <div class="col-12 col-sm-6 col-lg-4 d-flex flex-column align-items-center">
-                            <div class="catalog__card product d-flex flex-column">
-                                <img src="./assets/img/img.png" alt="img" />
-                                <div class="product__info d-flex flex-column">
-                                    <p class="product__descriptions">
-                                        Марсель Руссо
-                                    </p>
-                                    <h3>Охота Амура</h3>
-                                    <p class="product__details">
-                                        Холст, масло (50х80)
-                                    </p>
-                                    <p class="product__price">14 500 руб</p>
-                                    <a href="#" class="d-block text-center baton">В корзину</a>
+                    <div
+                        class="col-12 col-md d-flex justify-content-between justify-content-md-end align-items-center position-relative"
+                    >
+                        <nav class="navbar navbar-expand-lg">
+                            <div class="container-fluid px-0">
+                                <button
+                                    class="navbar-toggler"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#navbarNavAltMarkup"
+                                    aria-controls="navbarNavAltMarkup"
+                                    aria-expanded="false"
+                                    aria-label="Переключатель навигации"
+                                >
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div
+                                    class="collapse navbar-collapse"
+                                    id="navbarNavAltMarkup"
+                                >
+                                    <div class="navbar-nav ms-auto me-0">
+                                        <a class="nav-link" href="#catalog"
+                                            >Репродукции</a
+                                        >
+                                        <a class="nav-link" href="#collection"
+                                            >Новинки</a
+                                        >
+                                        <a class="nav-link" href="#team"
+                                            >О нас</a
+                                        >
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-lg-4 d-flex flex-column align-items-center">
-                            <div class="catalog__card product d-flex flex-column">
-                                <img src="./assets/img/img1.png" alt="img" />
-                                <div class="product__info d-flex flex-column">
-                                    <p class="product__descriptions">
-                                        Анри Селин
-                                    </p>
-                                    <h3>Дама с собачкой</h3>
-                                    <p class="product__details">
-                                        Акрил, бумага (50х80)
-                                    </p>
-                                    <p class="product__price">16 500 руб</p>
-                                    <a href="#" class="d-block text-center baton">В корзину</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-lg-4 d-flex flex-column align-items-center">
-                            <div class="catalog__card product d-flex flex-column">
-                                <img src="./assets/img/img2.png" alt="img" />
-                                <div class="product__info d-flex flex-column">
-                                    <p class="product__descriptions">
-                                        Франсуа Дюпон
-                                    </p>
-                                    <h3>Процедура</h3>
-                                    <p class="product__details">
-                                        Цветная литография (40х60)
-                                    </p>
-                                    <p class="product__price">20 000 руб</p>
-                                    <a href="#" class="d-block text-center baton">В корзину</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-lg-4 d-flex flex-column align-items-center">
-                            <div class="catalog__card product d-flex flex-column">
-                                <img src="./assets/img/img3.png" alt="img" />
-                                <div class="product__info d-flex flex-column">
-                                    <p class="product__descriptions">
-                                        Луи Детуш
-                                    </p>
-                                    <h3>Роза</h3>
-                                    <p class="product__details">
-                                        Бумага, акрил (50х80)
-                                    </p>
-                                    <p class="product__price">12 000 руб</p>
-                                    <a href="#" class="d-block text-center baton">В корзину</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-lg-4 d-flex flex-column align-items-center">
-                            <div class="catalog__card product d-flex flex-column">
-                                <img src="./assets/img/img4.png" alt="img" />
-                                <div class="product__info d-flex flex-column">
-                                    <p class="product__descriptions">
-                                        Франсуа Дюпон
-                                    </p>
-                                    <h3>Птичья трапеза</h3>
-                                    <p class="product__details">
-                                        Цветная литография (40х60)
-                                    </p>
-                                    <p class="product__price">22 500 руб</p>
-                                    <a href="#" class="d-block text-center baton">В корзину</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-lg-4 d-flex flex-column align-items-center">
-                            <div class="catalog__card product d-flex flex-column">
-                                <img src="./assets/img/img5.png" alt="img" />
-                                <div class="product__info d-flex flex-column">
-                                    <p class="product__descriptions">
-                                        Пьер Моранж
-                                    </p>
-                                    <h3>Пейзаж с рыбой</h3>
-                                    <p class="product__details">
-                                        Цветная литография (40х60)
-                                    </p>
-                                    <p class="product__price">20 000 руб</p>
-                                    <a href="#" class="d-block text-center baton">В корзину</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="germany countries flex-wrap">
-                        <div class="col-12 col-sm-6 col-lg-4 d-flex flex-column align-items-center">
-                            <div class="catalog__card product d-flex flex-column">
-                                <img src="./assets/img/img6.png" alt="img" />
-                                <div class="product__info d-flex flex-column">
-                                    <p class="product__descriptions">
-                                        Курт Вернер
-                                    </p>
-                                    <h3>Над городом</h3>
-                                    <p class="product__details">
-                                        Цветная литография (40х60)
-                                    </p>
-                                    <p class="product__price">16 000 руб</p>
-                                    <a href="#" class="d-block text-center baton">В корзину</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-lg-4 d-flex flex-column align-items-center">
-                            <div class="catalog__card product d-flex flex-column">
-                                <img src="./assets/img/img7.png" alt="img" />
-                                <div class="product__info d-flex flex-column">
-                                    <p class="product__descriptions">
-                                        Макс Рихтер
-                                    </p>
-                                    <h3>Птенцы</h3>
-                                    <p class="product__details">
-                                        Холст, масло (50х80)
-                                    </p>
-                                    <p class="product__price">14 500 руб</p>
-                                    <a href="#" class="d-block text-center baton">В корзину</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-lg-4 d-flex flex-column align-items-center">
-                            <div class="catalog__card product d-flex flex-column">
-                                <img src="./assets/img/img8.png" alt="img" />
-                                <div class="product__info d-flex flex-column">
-                                    <p class="product__descriptions">
-                                        Мартин Майер
-                                    </p>
-                                    <h3>Среди листьев</h3>
-                                    <p class="product__details">
-                                        Цветная литография (40х60)
-                                    </p>
-                                    <p class="product__price">20 000 руб</p>
-                                    <a href="#" class="d-block text-center baton">В корзину</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-lg-4 d-flex flex-column align-items-center">
-                            <div class="catalog__card product d-flex flex-column">
-                                <img src="./assets/img/img9.png" alt="img" />
-                                <div class="product__info d-flex flex-column">
-                                    <p class="product__descriptions">
-                                        Герман Беккер
-                                    </p>
-                                    <h3>Яркая птица</h3>
-                                    <p class="product__details">
-                                        Цветная литография (40х60)
-                                    </p>
-                                    <p class="product__price">13 000 руб</p>
-                                    <a href="#" class="d-block text-center baton">В корзину</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-lg-4 d-flex flex-column align-items-center">
-                            <div class="catalog__card product d-flex flex-column">
-                                <img src="./assets/img/img10.png" alt="img" />
-                                <div class="product__info d-flex flex-column">
-                                    <p class="product__descriptions">
-                                        Вульф Бауэр
-                                    </p>
-                                    <h3>Дятлы</h3>
-                                    <p class="product__details">
-                                        Бумага, акрил (50х80)
-                                    </p>
-                                    <p class="product__price">20 000 руб</p>
-                                    <a href="#" class="d-block text-center baton">В корзину</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-lg-4 d-flex flex-column align-items-center">
-                            <div class="catalog__card product d-flex flex-column">
-                                <img src="./assets/img/img11.png" alt="img" />
-                                <div class="product__info d-flex flex-column">
-                                    <p class="product__descriptions">
-                                        Вальтер Хартманн
-                                    </p>
-                                    <h3>Большие воды</h3>
-                                    <p class="product__details">
-                                        Бумага, акрил (40х60)
-                                    </p>
-                                    <p class="product__price">23 000 руб</p>
-                                    <a href="#" class="d-block text-center baton">В корзину</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="england countries flex-wrap">
-                        <div class="col-12 col-sm-6 col-lg-4 d-flex flex-column align-items-center">
-                            <div class="catalog__card product d-flex flex-column">
-                                <img src="./assets/img/img12.png" alt="img" />
-                                <div class="product__info d-flex flex-column">
-                                    <p class="product__descriptions">
-                                        Пол Смит
-                                    </p>
-                                    <h3>Дикий зверь</h3>
-                                    <p class="product__details">
-                                        Акварель, бумага (50х80)
-                                    </p>
-                                    <p class="product__price">19 500 руб</p>
-                                    <a href="#" class="d-block text-center baton">В корзину</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-lg-4 d-flex flex-column align-items-center">
-                            <div class="catalog__card product d-flex flex-column">
-                                <img src="./assets/img/img13.png" alt="img" />
-                                <div class="product__info d-flex flex-column">
-                                    <p class="product__descriptions">
-                                        Джон Уайт
-                                    </p>
-                                    <h3>Скалистый берег</h3>
-                                    <p class="product__details">
-                                        Цветная литография (40х60)
-                                    </p>
-                                    <p class="product__price">17 500 руб</p>
-                                    <a href="#" class="d-block text-center baton">В корзину</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-lg-4 d-flex flex-column align-items-center">
-                            <div class="catalog__card product d-flex flex-column">
-                                <img src="./assets/img/img14.png" alt="img" />
-                                <div class="product__info d-flex flex-column">
-                                    <p class="product__descriptions">
-                                        Джим Уотсон
-                                    </p>
-                                    <h3>Река и горы</h3>
-                                    <p class="product__details">
-                                        Акварель, бумага (50х80)
-                                    </p>
-                                    <p class="product__price">20 5000 руб</p>
-                                    <a href="#" class="d-block text-center baton">В корзину</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-lg-4 d-flex flex-column align-items-center">
-                            <div class="catalog__card product d-flex flex-column">
-                                <img src="./assets/img/img15.png" alt="img" />
-                                <div class="product__info d-flex flex-column">
-                                    <p class="product__descriptions">
-                                        Юджин Зиллион
-                                    </p>
-                                    <h3>Белый попугай</h3>
-                                    <p class="product__details">
-                                        Цветная литография (40х60)
-                                    </p>
-                                    <p class="product__price">15 500 руб</p>
-                                    <a href="#" class="d-block text-center baton">В корзину</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-lg-4 d-flex flex-column align-items-center">
-                            <div class="catalog__card product d-flex flex-column">
-                                <img src="./assets/img/img16.png" alt="img" />
-                                <div class="product__info d-flex flex-column">
-                                    <p class="product__descriptions">
-                                        Эрик Гиллман
-                                    </p>
-                                    <h3>Ночная рыба</h3>
-                                    <p class="product__details">
-                                        Бумага, акрил (50х80)
-                                    </p>
-                                    <p class="product__price">12 500 руб</p>
-                                    <a href="#" class="d-block text-center baton">В корзину</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-lg-4 d-flex flex-column align-items-center">
-                            <div class="catalog__card product d-flex flex-column">
-                                <img src="./assets/img/img17.png" alt="img" />
-                                <div class="product__info d-flex flex-column">
-                                    <p class="product__descriptions">
-                                        Альфред Барр
-                                    </p>
-                                    <h3>Рыжий кот</h3>
-                                    <p class="product__details">
-                                        Цветная литография (40х60)
-                                    </p>
-                                    <p class="product__price">21 000 руб</p>
-                                    <a href="#" class="d-block text-center baton">В корзину</a>
-                                </div>
-                            </div>
+                        </nav>
+                        <div class="cart">
+                            <img src="./assets/img/cart.svg" alt="cart" />
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <section class="collection" id="collection">
-            <div class="container-fluid container-lg">
-                <div class="row">
-                    <div class="col-12 col-lg-6">
-                        <div class="d-flex align-items-center content">
-                            <img src="./assets/img/Star.svg" alt="star">
-                            <h3>Новая коллекция французских авторов</h3>
+        </header>
+        <main>
+            <section class="intro">
+                <div class="container-fluid container-lg">
+                    <div class="row align-items-center">
+                        <div class="col-auto col-md-6 d-none d-sm-block">
+                            <img src="./assets/img/bird.png" alt="bird" />
                         </div>
-                        <p>Сложно сказать, почему акционеры крупнейших компаний призывают нас к новым свершениям,
-                            которые, в свою очередь, должны быть заблокированы в рамках своих собственных рациональных
-                            ограничений.</p>
-                        <p>Принимая во внимание показатели успешности, граница обучения кадров предопределяет высокую
-                            востребованность направлений прогрессивного развития.</p>
-                        <a href="#" class="d-block d-sm-inline-block text-center baton">Ознакомиться</a>
+                        <div class="col col-md-6">
+                            <h1>Реплики картин от <span>Ink. House</span></h1>
+                            <p class="intro__description">
+                                Высокое качество отрисовки на плотной бумаге или
+                                льняном холсте. Редкие произведения, доступные
+                                цены.
+                            </p>
+                            <a href="#" class="d-inline-block baton"
+                                >Продукция</a
+                            >
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section class="team" id="team">
-            <div class="container-fluid container-lg">
-                <div class="row">
-                    <div class="col-12 col-lg-auto picture text-center">
-                        <img src="./assets/img/paint.png" alt="paint">
+            </section>
+            <section class="catalog" id="catalog">
+                <div class="container-fluid container-lg">
+                    <div class="row align-items-md-center title-row">
+                        <div class="col-12 col-md-auto">
+                            <h2>Репродукции</h2>
+                        </div>
+                        <div
+                            class="col-12 col-md d-flex justify-content-md-end"
+                        >
+                            <div
+                                class="catalog__filters filters d-none d-sm-flex"
+                            >
+                                <button
+                                    type="button"
+                                    class="filters__item active raleway-medium france"
+                                >
+                                    Франция
+                                </button>
+                                <button
+                                    type="button"
+                                    class="filters__item raleway-medium germany"
+                                >
+                                    Германия
+                                </button>
+                                <button
+                                    type="button"
+                                    class="filters__item raleway-medium england"
+                                >
+                                    Англия
+                                </button>
+                            </div>
+                            <div
+                                class="catalog__filters flags d-flex d-sm-none justify-content-center"
+                            >
+                                <button type="button" class="flags__item">
+                                    <img
+                                        src="./assets/img/fr.svg"
+                                        alt="France"
+                                    />
+                                </button>
+                                <button type="button" class="flags__item">
+                                    <img
+                                        src="./assets/img/ger.svg"
+                                        alt="Germany"
+                                    />
+                                </button>
+                                <button type="button" class="flags__item">
+                                    <img
+                                        src="./assets/img/eng.svg"
+                                        alt="England"
+                                    />
+                                </button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-12 col-lg d-lg-flex flex-lg-column justify-content-lg-end">
-                        <div class="team__description">
-                            <h2 class="text-center text-lg-start">Наша команда</h2>
-                            <p>Значимость этих проблем настолько очевидна, что базовый вектор развития позволяет оценить
-                                значение экспериментов, поражающих по своей масштабности и грандиозности. Мы вынуждены
-                                отталкиваться от того, что консультация с широким активом.</p>
-                            <div class="team__photos d-flex justify-content-center justify-content-lg-start">
-                                <img src="./assets/img/team1.svg" alt="team1">
+                    <div class="row catalog__list">
+                        <div class="france countries show flex-wrap">
+                            <div
+                                class="col-12 col-sm-6 col-lg-4 d-flex flex-column align-items-center"
+                            >
+                                <div
+                                    class="catalog__card product d-flex flex-column"
+                                >
+                                    <img src="./assets/img/img.png" alt="img" />
+                                    <div
+                                        class="product__info d-flex flex-column"
+                                    >
+                                        <p class="product__descriptions">
+                                            Марсель Руссо
+                                        </p>
+                                        <h3>Охота Амура</h3>
+                                        <p class="product__details">
+                                            Холст, масло (50х80)
+                                        </p>
+                                        <p class="product__price">14 500 руб</p>
+                                        <a
+                                            href="#"
+                                            class="d-block text-center baton"
+                                            >В корзину</a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="col-12 col-sm-6 col-lg-4 d-flex flex-column align-items-center"
+                            >
+                                <div
+                                    class="catalog__card product d-flex flex-column"
+                                >
+                                    <img
+                                        src="./assets/img/img1.png"
+                                        alt="img"
+                                    />
+                                    <div
+                                        class="product__info d-flex flex-column"
+                                    >
+                                        <p class="product__descriptions">
+                                            Анри Селин
+                                        </p>
+                                        <h3>Дама с собачкой</h3>
+                                        <p class="product__details">
+                                            Акрил, бумага (50х80)
+                                        </p>
+                                        <p class="product__price">16 500 руб</p>
+                                        <a
+                                            href="#"
+                                            class="d-block text-center baton"
+                                            >В корзину</a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="col-12 col-sm-6 col-lg-4 d-flex flex-column align-items-center"
+                            >
+                                <div
+                                    class="catalog__card product d-flex flex-column"
+                                >
+                                    <img
+                                        src="./assets/img/img2.png"
+                                        alt="img"
+                                    />
+                                    <div
+                                        class="product__info d-flex flex-column"
+                                    >
+                                        <p class="product__descriptions">
+                                            Франсуа Дюпон
+                                        </p>
+                                        <h3>Процедура</h3>
+                                        <p class="product__details">
+                                            Цветная литография (40х60)
+                                        </p>
+                                        <p class="product__price">20 000 руб</p>
+                                        <a
+                                            href="#"
+                                            class="d-block text-center baton"
+                                            >В корзину</a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="col-12 col-sm-6 col-lg-4 d-flex flex-column align-items-center"
+                            >
+                                <div
+                                    class="catalog__card product d-flex flex-column"
+                                >
+                                    <img
+                                        src="./assets/img/img3.png"
+                                        alt="img"
+                                    />
+                                    <div
+                                        class="product__info d-flex flex-column"
+                                    >
+                                        <p class="product__descriptions">
+                                            Луи Детуш
+                                        </p>
+                                        <h3>Роза</h3>
+                                        <p class="product__details">
+                                            Бумага, акрил (50х80)
+                                        </p>
+                                        <p class="product__price">12 000 руб</p>
+                                        <a
+                                            href="#"
+                                            class="d-block text-center baton"
+                                            >В корзину</a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="col-12 col-sm-6 col-lg-4 d-flex flex-column align-items-center"
+                            >
+                                <div
+                                    class="catalog__card product d-flex flex-column"
+                                >
+                                    <img
+                                        src="./assets/img/img4.png"
+                                        alt="img"
+                                    />
+                                    <div
+                                        class="product__info d-flex flex-column"
+                                    >
+                                        <p class="product__descriptions">
+                                            Франсуа Дюпон
+                                        </p>
+                                        <h3>Птичья трапеза</h3>
+                                        <p class="product__details">
+                                            Цветная литография (40х60)
+                                        </p>
+                                        <p class="product__price">22 500 руб</p>
+                                        <a
+                                            href="#"
+                                            class="d-block text-center baton"
+                                            >В корзину</a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="col-12 col-sm-6 col-lg-4 d-flex flex-column align-items-center"
+                            >
+                                <div
+                                    class="catalog__card product d-flex flex-column"
+                                >
+                                    <img
+                                        src="./assets/img/img5.png"
+                                        alt="img"
+                                    />
+                                    <div
+                                        class="product__info d-flex flex-column"
+                                    >
+                                        <p class="product__descriptions">
+                                            Пьер Моранж
+                                        </p>
+                                        <h3>Пейзаж с рыбой</h3>
+                                        <p class="product__details">
+                                            Цветная литография (40х60)
+                                        </p>
+                                        <p class="product__price">20 000 руб</p>
+                                        <a
+                                            href="#"
+                                            class="d-block text-center baton"
+                                            >В корзину</a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="germany countries flex-wrap">
+                            <div
+                                class="col-12 col-sm-6 col-lg-4 d-flex flex-column align-items-center"
+                            >
+                                <div
+                                    class="catalog__card product d-flex flex-column"
+                                >
+                                    <img
+                                        src="./assets/img/img6.png"
+                                        alt="img"
+                                    />
+                                    <div
+                                        class="product__info d-flex flex-column"
+                                    >
+                                        <p class="product__descriptions">
+                                            Курт Вернер
+                                        </p>
+                                        <h3>Над городом</h3>
+                                        <p class="product__details">
+                                            Цветная литография (40х60)
+                                        </p>
+                                        <p class="product__price">16 000 руб</p>
+                                        <a
+                                            href="#"
+                                            class="d-block text-center baton"
+                                            >В корзину</a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="col-12 col-sm-6 col-lg-4 d-flex flex-column align-items-center"
+                            >
+                                <div
+                                    class="catalog__card product d-flex flex-column"
+                                >
+                                    <img
+                                        src="./assets/img/img7.png"
+                                        alt="img"
+                                    />
+                                    <div
+                                        class="product__info d-flex flex-column"
+                                    >
+                                        <p class="product__descriptions">
+                                            Макс Рихтер
+                                        </p>
+                                        <h3>Птенцы</h3>
+                                        <p class="product__details">
+                                            Холст, масло (50х80)
+                                        </p>
+                                        <p class="product__price">14 500 руб</p>
+                                        <a
+                                            href="#"
+                                            class="d-block text-center baton"
+                                            >В корзину</a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="col-12 col-sm-6 col-lg-4 d-flex flex-column align-items-center"
+                            >
+                                <div
+                                    class="catalog__card product d-flex flex-column"
+                                >
+                                    <img
+                                        src="./assets/img/img8.png"
+                                        alt="img"
+                                    />
+                                    <div
+                                        class="product__info d-flex flex-column"
+                                    >
+                                        <p class="product__descriptions">
+                                            Мартин Майер
+                                        </p>
+                                        <h3>Среди листьев</h3>
+                                        <p class="product__details">
+                                            Цветная литография (40х60)
+                                        </p>
+                                        <p class="product__price">20 000 руб</p>
+                                        <a
+                                            href="#"
+                                            class="d-block text-center baton"
+                                            >В корзину</a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="col-12 col-sm-6 col-lg-4 d-flex flex-column align-items-center"
+                            >
+                                <div
+                                    class="catalog__card product d-flex flex-column"
+                                >
+                                    <img
+                                        src="./assets/img/img9.png"
+                                        alt="img"
+                                    />
+                                    <div
+                                        class="product__info d-flex flex-column"
+                                    >
+                                        <p class="product__descriptions">
+                                            Герман Беккер
+                                        </p>
+                                        <h3>Яркая птица</h3>
+                                        <p class="product__details">
+                                            Цветная литография (40х60)
+                                        </p>
+                                        <p class="product__price">13 000 руб</p>
+                                        <a
+                                            href="#"
+                                            class="d-block text-center baton"
+                                            >В корзину</a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="col-12 col-sm-6 col-lg-4 d-flex flex-column align-items-center"
+                            >
+                                <div
+                                    class="catalog__card product d-flex flex-column"
+                                >
+                                    <img
+                                        src="./assets/img/img10.png"
+                                        alt="img"
+                                    />
+                                    <div
+                                        class="product__info d-flex flex-column"
+                                    >
+                                        <p class="product__descriptions">
+                                            Вульф Бауэр
+                                        </p>
+                                        <h3>Дятлы</h3>
+                                        <p class="product__details">
+                                            Бумага, акрил (50х80)
+                                        </p>
+                                        <p class="product__price">20 000 руб</p>
+                                        <a
+                                            href="#"
+                                            class="d-block text-center baton"
+                                            >В корзину</a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="col-12 col-sm-6 col-lg-4 d-flex flex-column align-items-center"
+                            >
+                                <div
+                                    class="catalog__card product d-flex flex-column"
+                                >
+                                    <img
+                                        src="./assets/img/img11.png"
+                                        alt="img"
+                                    />
+                                    <div
+                                        class="product__info d-flex flex-column"
+                                    >
+                                        <p class="product__descriptions">
+                                            Вальтер Хартманн
+                                        </p>
+                                        <h3>Большие воды</h3>
+                                        <p class="product__details">
+                                            Бумага, акрил (40х60)
+                                        </p>
+                                        <p class="product__price">23 000 руб</p>
+                                        <a
+                                            href="#"
+                                            class="d-block text-center baton"
+                                            >В корзину</a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="england countries flex-wrap">
+                            <div
+                                class="col-12 col-sm-6 col-lg-4 d-flex flex-column align-items-center"
+                            >
+                                <div
+                                    class="catalog__card product d-flex flex-column"
+                                >
+                                    <img
+                                        src="./assets/img/img12.png"
+                                        alt="img"
+                                    />
+                                    <div
+                                        class="product__info d-flex flex-column"
+                                    >
+                                        <p class="product__descriptions">
+                                            Пол Смит
+                                        </p>
+                                        <h3>Дикий зверь</h3>
+                                        <p class="product__details">
+                                            Акварель, бумага (50х80)
+                                        </p>
+                                        <p class="product__price">19 500 руб</p>
+                                        <a
+                                            href="#"
+                                            class="d-block text-center baton"
+                                            >В корзину</a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="col-12 col-sm-6 col-lg-4 d-flex flex-column align-items-center"
+                            >
+                                <div
+                                    class="catalog__card product d-flex flex-column"
+                                >
+                                    <img
+                                        src="./assets/img/img13.png"
+                                        alt="img"
+                                    />
+                                    <div
+                                        class="product__info d-flex flex-column"
+                                    >
+                                        <p class="product__descriptions">
+                                            Джон Уайт
+                                        </p>
+                                        <h3>Скалистый берег</h3>
+                                        <p class="product__details">
+                                            Цветная литография (40х60)
+                                        </p>
+                                        <p class="product__price">17 500 руб</p>
+                                        <a
+                                            href="#"
+                                            class="d-block text-center baton"
+                                            >В корзину</a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="col-12 col-sm-6 col-lg-4 d-flex flex-column align-items-center"
+                            >
+                                <div
+                                    class="catalog__card product d-flex flex-column"
+                                >
+                                    <img
+                                        src="./assets/img/img14.png"
+                                        alt="img"
+                                    />
+                                    <div
+                                        class="product__info d-flex flex-column"
+                                    >
+                                        <p class="product__descriptions">
+                                            Джим Уотсон
+                                        </p>
+                                        <h3>Река и горы</h3>
+                                        <p class="product__details">
+                                            Акварель, бумага (50х80)
+                                        </p>
+                                        <p class="product__price">
+                                            20 5000 руб
+                                        </p>
+                                        <a
+                                            href="#"
+                                            class="d-block text-center baton"
+                                            >В корзину</a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="col-12 col-sm-6 col-lg-4 d-flex flex-column align-items-center"
+                            >
+                                <div
+                                    class="catalog__card product d-flex flex-column"
+                                >
+                                    <img
+                                        src="./assets/img/img15.png"
+                                        alt="img"
+                                    />
+                                    <div
+                                        class="product__info d-flex flex-column"
+                                    >
+                                        <p class="product__descriptions">
+                                            Юджин Зиллион
+                                        </p>
+                                        <h3>Белый попугай</h3>
+                                        <p class="product__details">
+                                            Цветная литография (40х60)
+                                        </p>
+                                        <p class="product__price">15 500 руб</p>
+                                        <a
+                                            href="#"
+                                            class="d-block text-center baton"
+                                            >В корзину</a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="col-12 col-sm-6 col-lg-4 d-flex flex-column align-items-center"
+                            >
+                                <div
+                                    class="catalog__card product d-flex flex-column"
+                                >
+                                    <img
+                                        src="./assets/img/img16.png"
+                                        alt="img"
+                                    />
+                                    <div
+                                        class="product__info d-flex flex-column"
+                                    >
+                                        <p class="product__descriptions">
+                                            Эрик Гиллман
+                                        </p>
+                                        <h3>Ночная рыба</h3>
+                                        <p class="product__details">
+                                            Бумага, акрил (50х80)
+                                        </p>
+                                        <p class="product__price">12 500 руб</p>
+                                        <a
+                                            href="#"
+                                            class="d-block text-center baton"
+                                            >В корзину</a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="col-12 col-sm-6 col-lg-4 d-flex flex-column align-items-center"
+                            >
+                                <div
+                                    class="catalog__card product d-flex flex-column"
+                                >
+                                    <img
+                                        src="./assets/img/img17.png"
+                                        alt="img"
+                                    />
+                                    <div
+                                        class="product__info d-flex flex-column"
+                                    >
+                                        <p class="product__descriptions">
+                                            Альфред Барр
+                                        </p>
+                                        <h3>Рыжий кот</h3>
+                                        <p class="product__details">
+                                            Цветная литография (40х60)
+                                        </p>
+                                        <p class="product__price">21 000 руб</p>
+                                        <a
+                                            href="#"
+                                            class="d-block text-center baton"
+                                            >В корзину</a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="collection" id="collection">
+                <div class="container-fluid container-lg">
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                            <div class="d-flex align-items-center content">
+                                <img src="./assets/img/Star.svg" alt="star" />
+                                <h3>Новая коллекция французских авторов</h3>
+                            </div>
+                            <p>
+                                Сложно сказать, почему акционеры крупнейших
+                                компаний призывают нас к новым свершениям,
+                                которые, в свою очередь, должны быть
+                                заблокированы в рамках своих собственных
+                                рациональных ограничений.
+                            </p>
+                            <p>
+                                Принимая во внимание показатели успешности,
+                                граница обучения кадров предопределяет высокую
+                                востребованность направлений прогрессивного
+                                развития.
+                            </p>
+                            <a
+                                href="#"
+                                class="d-block d-sm-inline-block text-center baton"
+                                >Ознакомиться</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="team" id="team">
+                <div class="container-fluid container-lg">
+                    <div class="row">
+                        <div class="col-12 col-lg-auto picture text-center">
+                            <img src="./assets/img/paint.png" alt="paint" />
+                        </div>
+                        <div
+                            class="col-12 col-lg d-lg-flex flex-lg-column justify-content-lg-end"
+                        >
+                            <div class="team__description">
+                                <h2 class="text-center text-lg-start">
+                                    Наша команда
+                                </h2>
+                                <p>
+                                    Значимость этих проблем настолько очевидна,
+                                    что базовый вектор развития позволяет
+                                    оценить значение экспериментов, поражающих
+                                    по своей масштабности и грандиозности. Мы
+                                    вынуждены отталкиваться от того, что
+                                    консультация с широким активом.
+                                </p>
+                                <div
+                                    class="team__photos photos d-flex justify-content-center justify-content-lg-start"
+                                >
+                                    <!-- <img src="./assets/img/team1.svg" alt="team1">
                                 <img src="./assets/img/team2.svg" alt="team2">
-                                <img src="./assets/img/team3.svg" alt="team3">
+                                <img src="./assets/img/team3.svg" alt="team3"> -->
+                                    <img
+                                        src="https://thispersondoesnotexist.com"
+                                        alt="team1"
+                                        class="photos__item"
+                                    />
+                                    <img
+                                        src="https://thispersondoesnotexist.com"
+                                        alt="team2"
+                                        class="photos__item"
+                                    />
+                                    <img
+                                        src="https://thispersondoesnotexist.com"
+                                        alt="team3"
+                                        class="photos__item"
+                                    />
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-    </main>
-    <footer class="footer">
-        <div class="container">
-            <div class="row footer-row">
-                <div class="col-6 col-sm-12 col-xl">
-                    <div class="row contact">
-                        <div class="col-12 col-sm col-xl-12 footer__logo">
-                            <img src="./assets/img/logo.svg" alt="logo">
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="row footer-row">
+                    <div class="col-6 col-sm-12 col-xl">
+                        <div class="row contact">
+                            <div class="col-12 col-sm col-xl-12 footer__logo">
+                                <img src="./assets/img/logo.svg" alt="logo" />
+                            </div>
+                            <div class="col-12 col-sm-auto col-xl-12">
+                                <p>+7 (999) 543-54-54</p>
+                                <p>Мастерская</p>
+                            </div>
                         </div>
-                        <div class="col-12 col-sm-auto col-xl-12">
-                            <p>+7 (999) 543-54-54</p>
-                            <p>Мастерская</p>
+                    </div>
+                    <div class="col-6 col-sm-auto">
+                        <div class="footer__links">
+                            <p>Репродукции</p>
+                            <a href="#">Франция</a>
+                            <a href="#">Германия</a>
+                            <a href="#">Англия</a>
                         </div>
                     </div>
-                </div>
-                <div class="col-6 col-sm-auto">
-                    <div class="footer__links">
-                        <p>Репродукции</p>
-                        <a href="#">Франция</a>
-                        <a href="#">Германия</a>
-                        <a href="#">Англия</a>
+                    <div class="col-6 col-sm-auto">
+                        <div class="footer__links">
+                            <p>Новинки</p>
+                            <a href="#">2021</a>
+                            <a href="#">2020</a>
+                        </div>
                     </div>
-                </div>
-                <div class="col-6 col-sm-auto">
-                    <div class="footer__links">
-                        <p>Новинки</p>
-                        <a href="#">2021</a>
-                        <a href="#">2020</a>
+                    <div class="col-6 col-sm-auto">
+                        <div class="footer__links">
+                            <p>O нас</p>
+                            <a href="#">Художники</a>
+                            <a href="#">Менеджеры</a>
+                        </div>
                     </div>
-                </div>
-                <div class="col-6 col-sm-auto">
-                    <div class="footer__links">
-                        <p>O нас</p>
-                        <a href="#">Художники</a>
-                        <a href="#">Менеджеры</a>
+                    <div class="col-12 col-md-auto">
+                        <div class="socials">
+                            <a href=""
+                                ><img src="./assets/img/fb.svg" alt="facebook"
+                            /></a>
+                            <a href=""
+                                ><img
+                                    src="./assets/img/insta.svg"
+                                    alt="instagram"
+                            /></a>
+                            <a href=""
+                                ><img src="./assets/img/yt.svg" alt="youtube"
+                            /></a>
+                        </div>
+                        <p class="copyright">
+                            Ink. House &copy;
+                            <br class="d-none d-md-block" />All rights reserved
+                        </p>
                     </div>
-                </div>
-                <div class="col-12 col-md-auto">
-                    <div class="socials">
-                        <a href=""><img src="./assets/img/fb.svg" alt="facebook"></a>
-                        <a href=""><img src="./assets/img/insta.svg" alt="instagram"></a>
-                        <a href=""><img src="./assets/img/yt.svg" alt="youtube"></a>
-                    </div>
-                    <p class="copyright">Ink. House &copy; <br class="d-none d-md-block">All rights reserved</p>
                 </div>
             </div>
-        </div>
-    </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"
-        integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!-- <script src="./assets/js/custom2.js"></script> -->
-    <script src="./assets/js/custom.js"></script>
-</body>
-
+        </footer>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"
+            integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <!-- <script src="./assets/js/custom2.js"></script> -->
+        <script src="./assets/js/custom.js"></script>
+        <script src="./assets/js/gallery.js"></script>
+    </body>
 </html>

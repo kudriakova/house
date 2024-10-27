@@ -18,8 +18,14 @@
             line-height: 1.4;
         }
 
-        .team__photos {
+        .photos {
             gap: 1.5rem;
+
+            .photos__item {
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+            }
         }
     }
 }
