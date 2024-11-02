@@ -1,0 +1,25 @@
+.team {
+    margin-bottom: 50px;
+
+    .row {
+        row-gap: 1.875rem;
+    }
+
+    .picture {
+        img {
+            width: 100%;
+            max-width: 320px;
+        }
+    }
+
+    .team__description {
+        p {
+            margin: 20px 0;
+            line-height: 1.4;
+        }
+
+        .team__photos {
+            gap: 1.5rem;
+        }
+    }
+}
