@@ -1,5 +1,20 @@
 <script setup>
+import axios from 'axios';
+import { ref } from 'vue';
 
+const countries = ref([]);
+
+const fetchGalleryData = async () => {
+    try {
+        const serverUrl = 'http://192.168.100.30:3000/gallery';
+        const response = await axios.get(serverUrl);
+        countries.value = response.data; // Обновляем данные
+        console.log('Ответ сервера: ', response.data);
+    } catch (error) {
+        console.error('Error fetching gallery data:', error);
+    }
+};
+fetchGalleryData();
 </script>
 
 
@@ -37,7 +52,33 @@
                 </div>
             </div>
             <div class="row catalog__list">
-                <div class="france countries show flex-wrap">
+                <!-- <div v-for="country in countries" :key="country.id">
+                    <div v-for="item in country.paintings" :key="item.id">
+                        {{ item.price }}
+                    </div>
+                </div> -->
+
+                <div class="france countries show flex-wrap" v-for="country in countries" :key="country.id">
+                    <div class="col-12 col-sm-6 col-lg-4 d-flex flex-column align-items-center"
+                        v-for="item in country.paintings" :key="item.id">
+                        <div class="catalog__card product d-flex flex-column">
+                            <img :src="item.url" alt="img" />
+                            <div class="product__info d-flex flex-column">
+                                <p class="product__descriptions">
+                                    {{ item.author }}
+                                </p>
+                                <h3>{{ item.title }}</h3>
+                                <p class="product__details">
+                                    {{ item.description }}
+                                </p>
+                                <p class="product__price">{{ item.price }}</p>
+                                <a href="#" class="d-block text-center baton">В корзину</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="france countries show flex-wrap">
                     <div class="col-12 col-sm-6 col-lg-4 d-flex flex-column align-items-center">
                         <div class="catalog__card product d-flex flex-column">
                             <img src="./assets/img/img.png" alt="img" />
@@ -54,7 +95,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
